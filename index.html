@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus IT — Современный образовательный центр</title>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">Nexus IT</span>
+                    <span class="logo-subtitle">Образовательный центр <br> Багдолотова Ширин</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero">Главная</a>
+                <a href="#courses">Курсы</a>
+                <a href="#about">О нас</a>
+                <a href="#features">Преимущества</a>
+                <a href="#testimonials">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="#register" class="btn btn-primary">Записаться</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero" class="mobile-link">Главная</a>
+        <a href="#courses" class="mobile-link">Курсы</a>
+        <a href="#about" class="mobile-link">О нас</a>
+        <a href="#features" class="mobile-link">Преимущества</a>
+        <a href="#testimonials" class="mobile-link">Отзывы</a>
+        <a href="#contact" class="mobile-link">Контакты</a>
+        <a href="#register" class="mobile-link btn btn-primary" style="text-align: center; margin-top: 10px;">Записаться на курс</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-sparkles"></i> Набор на новый поток открыт
+                </div>
+                <h1 class="hero-title">
+                    ОБУЧАЙСЯ.<br>РАЗВИВАЙСЯ.<br><span>СОЗДАВАЙ.</span>
+                </h1>
+                <p class="hero-description">
+                    Современные IT-курсы для студентов и начинающих специалистов с полным погружением в практику и менторской поддержкой.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#register" class="btn btn-white">Записаться на курс <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#courses" class="btn btn-outline">Наши курсы</a>
+                </div>
+            </div>
+            <div class="hero-image-box">
+                <img src="https://placehold.co/600x500/4f46e5/ffffff?text=IT+Education" alt="Образовательный процесс" class="hero-img" onerror="this.src='https://placehold.co/600x500/333/fff?text=Image'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Courses -->
+    <section id="courses" class="section courses-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Направления</span>
+                <h2>Наши курсы</h2>
+                <p>Выберите востребованную IT-профессию и начните карьеру в технологиях.</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img-wrap">
+                        <img src="https://placehold.co/400x250/6366f1/ffffff?text=HTML+%26+CSS" alt="HTML & CSS" onerror="this.src='https://placehold.co/400x250/333/fff?text=HTML'">
+                        <span class="course-tag">2 месяца</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>HTML & CSS</h3>
+                        <p>Изучение основ веб-разработки, верстки адаптивных и современных сайтов.</p>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span>Цена</span>
+                                <strong>8 500 сом</strong>
+                            </div>
+                            <button onclick="openModal('HTML & CSS')" class="btn btn-sm btn-primary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img-wrap">
+                        <img src="https://placehold.co/400x250/059669/ffffff?text=Python" alt="Python" onerror="this.src='https://placehold.co/400x250/333/fff?text=Python'">
+                        <span class="course-tag">3 месяца</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Python</h3>
+                        <p>Основы программирования, синтаксис языка, алгоритмы и создание бэкенда.</p>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span>Цена</span>
+                                <strong>10 000 сом</strong>
+                            </div>
+                            <button onclick="openModal('Python')" class="btn btn-sm btn-primary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img-wrap">
+                        <img src="https://placehold.co/400x250/7c3aed/ffffff?text=AI+Tools" alt="Искусственный интеллект" onerror="this.src='https://placehold.co/400x250/333/fff?text=AI'">
+                        <span class="course-tag">2.5 месяца</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Искусственный интеллект</h3>
+                        <p>Современные AI-инструменты, нейросети, промпт-инжиниринг и автоматизация.</p>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span>Цена</span>
+                                <strong>12 000 сом</strong>
+                            </div>
+                            <button onclick="openModal('Искусственный интеллект')" class="btn btn-sm btn-primary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-img-wrap">
+                        <img src="https://placehold.co/400x250/d97706/ffffff?text=JavaScript" alt="JavaScript" onerror="this.src='https://placehold.co/400x250/333/fff?text=JS'">
+                        <span class="course-tag">3 месяца</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>JavaScript</h3>
+                        <p>Создание интерактивных сайтов, динамических веб-приложений и стандарты ES6+.</p>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span>Цена</span>
+                                <strong>10 500 сом</strong>
+                            </div>
+                            <button onclick="openModal('JavaScript')" class="btn btn-sm btn-primary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: About Us -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-col">
+                    <img src="https://placehold.co/600x450/4338ca/ffffff?text=Nexus+IT+Team" alt="О нас" class="about-img" onerror="this.src='https://placehold.co/600x450/333/fff?text=About'">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>500+</h3>
+                            <p>Студентов</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>15</h3>
+                            <p>Курсов</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>10</h3>
+                            <p>Преподавателей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-col">
+                    <span class="badge">О нашем центре</span>
+                    <h2>История центра и преимущества</h2>
+                    <p class="about-desc">
+                        Образовательный центр был основан с целью предоставления качественного и доступного IT-образования. Мы объединили лучших экспертов отрасли, создали уникальную методику обучения с упором на практику и помогаем студентам уверенно входить в мир IT.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Индивидуальный подход к каждому студенту</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Работа над реальными коммерческими проектами</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Помощь в составлении резюме и трудоустройстве</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Why Choose Us -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Преимущества</span>
+                <h2>Почему выбирают нас</h2>
+                <p>Все условия для эффективного и комфортного обучения.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Практические занятия</h3>
+                    <p>80% времени занятий — это написание кода и разбор реальных задач из практики.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Современные технологии</h3>
+                    <p>Актуальные стеки и передовые инструменты разработки, востребованные на рынке.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Опытные преподаватели</h3>
+                    <p>Действующие IT-специалисты с глубокими знаниями и реальным опытом работы.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Сертификат после обучения</h3>
+                    <p>Официальный документ установленного образца об успешном окончании курса.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Testimonials -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Отзывы</span>
+                <h2>Что говорят наши студенты</h2>
+                <p>Истории успеха и впечатления выпускников нашего центра.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">«Отличный курс! Очень понравилась подача материала преподавателем Айбеком. Все четко, понятно и сразу на практике.»</p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/6366f1/ffffff?text=Айбек" alt="Айбек" onerror="this.src='https://placehold.co/80x80/333/fff?text=User'">
+                        <div>
+                            <h4>Айбек</h4>
+                            <span>Студент курса Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">«Прекрасная атмосфера и отзывчивые менторы. Благодаря курсу по веб-разработке научилась создавать сайты с нуля!»</p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/059669/ffffff?text=Алина" alt="Алина" onerror="this.src='https://placehold.co/80x80/333/fff?text=User'">
+                        <div>
+                            <h4>Алина</h4>
+                            <span>Студентка HTML & CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">«Курс по JavaScript дал мощную базу для дальнейшего роста. Очень благодарен команде центра за поддержку!»</p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/7c3aed/ffffff?text=Бектур" alt="Бектур" onerror="this.src='https://placehold.co/80x80/333/fff?text=User'">
+                        <div>
+                            <h4>Бектур</h4>
+                            <span>Студент JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Registration Form -->
+    <section id="register" class="section register-section">
+        <div class="container">
+            <div class="register-box">
+                <div class="register-header">
+                    <span class="badge badge-white">Регистрация</span>
+                    <h2>Записаться на курс</h2>
+                    <p>Заполните форму заявки, и мы свяжемся с вами в ближайшее время.</p>
+                </div>
+
+                <form id="reg-form" onsubmit="handleForm(event)" class="reg-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Имя</label>
+                            <input type="text" id="name" required placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" id="phone" required placeholder="+996 XXX XXX XXX">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" required placeholder="example@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Выбор курса</label>
+                            <select id="course-select">
+                                <option value="HTML & CSS">HTML & CSS</option>
+                                <option value="Python">Python</option>
+                                <option value="Искусственный интеллект">Искусственный интеллект</option>
+                                <option value="JavaScript">JavaScript</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea id="message" rows="3" placeholder="Ваш вопрос или пожелание..."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-white btn-lg">Отправить заявку</button>
+                    </div>
+                </form>
+
+                <div id="success-msg" class="success-box hidden">
+                    <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                    <h3>Заявка успешно отправлена!</h3>
+                    <p>Спасибо за обращение. Наш менеджер перезвонит вам в течение 15 минут.</p>
+                    <button onclick="resetForm()" class="btn btn-outline-white">Отправить еще заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <span class="logo-title" style="color: white;">Образовательный центр</span>
+                    </div>
+                    <p class="footer-desc">Современный образовательный центр передовых IT-технологий. Обучаем программированию с нуля до трудоустройства.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#courses">Курсы</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#features">Преимущества</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p><i class="fa-solid fa-phone"></i> +996 504 141 050</p>
+                    <p><i class="fa-solid fa-envelope"></i> wirin1410gmail.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Образовательный центр. Все права защищены.</p>
+                <p>Instagram | Telegram | WhatsApp</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Course Details -->
+    <div id="course-modal" class="modal hidden">
+        <div class="modal-content">
+            <button onclick="closeModal()" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modal-title">Название курса</h3>
+            <p id="modal-desc">Подробная информация о программе курса, длительности занятий и приобретаемых практических навыках.</p>
+            <a href="#register" onclick="closeModal()" class="btn btn-primary" style="display: block; text-align: center; margin-top: 20px;">Записаться на этот курс</a>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        function openModal(courseName) {
+            const modal = document.getElementById('course-modal');
+            const title = document.getElementById('modal-title');
+            const desc = document.getElementById('modal-desc');
+
+            title.textContent = courseName;
+            desc.textContent = `Интенсивный курс по программе "${courseName}" включает полный набор практических заданий, код-ревью с ментором и создание реального проекта в ваше портфолио.`;
+            
+            const select = document.getElementById('course-select');
+            for(let i=0; i<select.options.length; i++) {
+                if(select.options[i].value === courseName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('course-modal').classList.add('hidden');
+        }
+
+        function handleForm(e) {
+            e.preventDefault();
+            document.getElementById('reg-form').classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            document.getElementById('reg-form').reset();
+            document.getElementById('success-msg').classList.add('hidden');
+            document.getElementById('reg-form').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
